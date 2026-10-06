@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Tahirghaffar Website</title>
+
+<style>
+
+body {
+    background-color: lightblue;
+    text-align: center;
+    font-family: Arial;
+    margin: 0;
+}
+
+nav {
+    background-color: darkblue;
+    padding: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 18px;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 40px;
+}
+
+h2 {
+    color: darkblue;
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    max-width: 450px;
+    margin: auto;
+    box-shadow: 0 5px 15px gray;
+}
+
+input, textarea {
+    padding: 12px;
+    width: 80%;
+    max-width: 350px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section>
+
+    <h1>Assalam-o-Alaikum! 👋</h1>
+
+    <h2>Mera Naam Tahirghaffar Hai</h2>
+
+    <p>Main website banana seekh raha hoon.</p>
+
+    <img src="https://www.w3schools.com/html/img_girl.jpg">
+
+</section>
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        Mera naam Tahirghaffar hai.
+        Main website development seekh raha hoon.
+    </p>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact Me</h2>
+
+    <form>
+
+        <input type="text" placeholder="Apna Naam">
+        <br><br>
+
+        <input type="email" placeholder="Apni Email">
+        <br><br>
+
+        <textarea placeholder="Apna Message"></textarea>
+        <br><br>
+
+        <button type="button" onclick="sendMessage()">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+<script>
+
+function sendMessage() {
+    alert("Shukriya! Aapka message receive ho gaya 🎉");
+}
+
+</script>
+
+</body>
+</html>
