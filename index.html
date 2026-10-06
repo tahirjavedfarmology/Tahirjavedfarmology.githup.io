@@ -3,218 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tahirghaffar Blog</title>
+<title>Tahirghaffar Blog - Tech, AI & Mobile Tips</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Arial,sans-serif;
+background:#f4f7fb;
+color:#222;
+line-height:1.7;
 }
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f7fb;
-  color: #222;
-  line-height: 1.6;
+header{
+background:#123c69;
+color:white;
+padding:35px 15px;
+text-align:center;
 }
-
-header {
-  background: #123c69;
-  color: white;
-  padding: 30px 15px;
-  text-align: center;
+header h1{font-size:34px;margin-bottom:8px}
+header p{font-size:16px}
+nav{
+background:#0b2d4d;
+padding:14px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:10;
 }
-
-header h1 {
-  font-size: 34px;
-  margin-bottom: 8px;
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
 }
-
-header p {
-  font-size: 16px;
+nav a:hover{color:#ffd166}
+.container{
+width:92%;
+max-width:1100px;
+margin:30px auto;
 }
-
-nav {
-  background: #0b2d4d;
-  padding: 14px;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+.hero{
+background:white;
+padding:35px 20px;
+text-align:center;
+border-radius:15px;
+margin-bottom:30px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: bold;
+.hero h2{
+color:#123c69;
+font-size:30px;
+margin-bottom:10px;
 }
-
-nav a:hover {
-  color: #ffd166;
+.section-title{
+color:#123c69;
+margin:30px 0 15px;
+font-size:28px;
 }
-
-.container {
-  width: 92%;
-  max-width: 1100px;
-  margin: 30px auto;
+.categories{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:30px;
 }
-
-.hero {
-  background: white;
-  padding: 35px 20px;
-  text-align: center;
-  border-radius: 15px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+.category{
+background:#123c69;
+color:white;
+padding:8px 14px;
+border-radius:20px;
+font-size:14px;
 }
-
-.hero h2 {
-  color: #123c69;
-  font-size: 30px;
-  margin-bottom: 10px;
+.post{
+background:white;
+padding:25px;
+border-radius:15px;
+margin-bottom:25px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
-
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin: 20px 0 30px;
+.post h3{
+color:#123c69;
+font-size:24px;
+margin-bottom:10px;
 }
-
-.category {
-  background: #123c69;
-  color: white;
-  padding: 9px 16px;
-  border-radius: 20px;
-  font-size: 14px;
+.post p{margin-bottom:15px}
+.btn{
+display:inline-block;
+background:#123c69;
+color:white;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
 }
-
-.posts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+.btn:hover{background:#0b2d4d}
+.article{
+background:white;
+padding:30px;
+border-radius:15px;
+margin-top:35px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
-
-.post {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+.article h2{
+color:#123c69;
+font-size:30px;
+margin-bottom:15px;
 }
-
-.post img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
+.article h3{
+color:#123c69;
+margin-top:22px;
+margin-bottom:8px;
 }
-
-.post-content {
-  padding: 20px;
+.article ul{
+padding-left:25px;
+margin-bottom:15px;
 }
-
-.post h3 {
-  color: #123c69;
-  margin-bottom: 8px;
+.about,.contact{
+background:white;
+padding:30px;
+border-radius:15px;
+margin-top:30px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
 }
-
-.post p {
-  color: #555;
-  font-size: 15px;
-  margin-bottom: 15px;
+footer{
+background:#0b2d4d;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
 }
-
-.read-more {
-  display: inline-block;
-  background: #123c69;
-  color: white;
-  text-decoration: none;
-  padding: 9px 15px;
-  border-radius: 7px;
+@media(max-width:600px){
+header h1{font-size:28px}
+nav a{
+display:inline-block;
+margin:5px 7px;
 }
-
-section {
-  margin-bottom: 45px;
-}
-
-section h2 {
-  text-align: center;
-  color: #123c69;
-  margin-bottom: 20px;
-  font-size: 28px;
-}
-
-.about,
-.contact {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  text-align: center;
-}
-
-.contact form {
-  max-width: 550px;
-  margin: auto;
-}
-
-.contact input,
-.contact textarea {
-  width: 100%;
-  padding: 13px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 7px;
-  font-size: 15px;
-}
-
-.contact textarea {
-  height: 130px;
-}
-
-.contact button {
-  background: #123c69;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 7px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-footer {
-  background: #0b2d4d;
-  color: white;
-  text-align: center;
-  padding: 25px 15px;
-  margin-top: 40px;
-}
-
-@media (max-width: 800px) {
-  .posts {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 550px) {
-  header h1 {
-    font-size: 27px;
-  }
-
-  nav a {
-    margin: 0 6px;
-    font-size: 13px;
-  }
-
-  .posts {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h2 {
-    font-size: 25px;
-  }
+.hero h2{font-size:25px}
+.post h3,.article h2{font-size:22px}
 }
 </style>
 </head>
@@ -222,100 +145,142 @@ footer {
 <body>
 
 <header>
-  <h1>Tahirghaffar Blog</h1>
-  <p>Ideas, Knowledge & Useful Information</p>
+<h1>Tahirghaffar Blog</h1>
+<p>Useful Tech, AI & Mobile Tips in Simple Language</p>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
-  <a href="#blog">Blog</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
+<a href="#home">Home</a>
+<a href="#blog">Blog</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
 
-<section id="home" class="hero">
-  <h2>Welcome to My Blog 👋</h2>
-  <p>Welcome! Yahan aapko useful information, interesting articles aur new ideas milenge.</p>
+<section class="hero" id="home">
+<h2>Welcome to Tahirghaffar Blog</h2>
+<p>Yahan aapko AI, ChatGPT, Android, mobile apps aur useful technology ke easy guides milenge.</p>
 </section>
 
-<section>
-  <h2>Categories</h2>
+<h2 class="section-title">Categories</h2>
 
-  <div class="categories">
-    <span class="category">Technology</span>
-    <span class="category">Education</span>
-    <span class="category">Lifestyle</span>
-    <span class="category">Tips & Tricks</span>
-    <span class="category">Knowledge</span>
-  </div>
-</section>
+<div class="categories">
+<span class="category">AI</span>
+<span class="category">ChatGPT</span>
+<span class="category">Android</span>
+<span class="category">Mobile Tips</span>
+<span class="category">Technology</span>
+<span class="category">Online Tools</span>
+</div>
 
 <section id="blog">
-  <h2>Latest Blog Posts</h2>
 
-  <div class="posts">
+<h2 class="section-title">Latest Blog Post</h2>
 
-    <article class="post">
-      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Technology">
-      <div class="post-content">
-        <h3>Technology Ka Future</h3>
-        <p>Technology hamari daily life ko kis tarah change kar rahi hai aur future mein kya possibilities hain.</p>
-        <a class="read-more" href="#">Read More</a>
-      </div>
-    </article>
+<div class="post">
+<h3>ChatGPT Ko Free Mein Kaise Use Karein — Complete Beginner Guide</h3>
 
-    <article class="post">
-      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Education">
-      <div class="post-content">
-        <h3>Learning Ka Best Tarika</h3>
-        <p>New skills seekhne aur apni knowledge improve karne ke kuch simple aur useful methods.</p>
-        <a class="read-more" href="#">Read More</a>
-      </div>
-    </article>
+<p>
+ChatGPT ek powerful AI tool hai jo writing, learning, ideas aur daily tasks mein help kar sakta hai.
+Is beginner guide mein hum simple steps mein samjhenge ke ChatGPT ko effectively kaise use kiya jaye.
+</p>
 
-    <article class="post">
-      <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="Lifestyle">
-      <div class="post-content">
-        <h3>Better Lifestyle Tips</h3>
-        <p>Daily routine ko better banane ke liye simple ideas aur productive habits.</p>
-        <a class="read-more" href="#">Read More</a>
-      </div>
-    </article>
+<a class="btn" href="#chatgpt-guide">Read Full Article</a>
+</div>
 
-  </div>
 </section>
 
-<section id="about">
-  <h2>About Me</h2>
+<article class="article" id="chatgpt-guide">
 
-  <div class="about">
-    <p>
-      Assalam-o-Alaikum! Mera naam Tahirghaffar hai.
-      Yeh mera personal blog hai jahan main useful information,
-      ideas aur interesting articles share karta hoon.
-    </p>
-  </div>
+<h2>ChatGPT Ko Free Mein Kaise Use Karein — Complete Beginner Guide</h2>
+
+<p>
+Aaj ke digital world mein AI tools bohat useful ho gaye hain. ChatGPT un tools mein se ek hai jo students, freelancers, business owners aur normal mobile users ke liye useful ho sakta hai.
+</p>
+
+<h3>ChatGPT Kya Hai?</h3>
+
+<p>
+ChatGPT ek AI assistant hai jisse aap questions pooch sakte hain, text likhwa sakte hain, ideas le sakte hain aur different topics ko samajhne mein madad le sakte hain.
+</p>
+
+<h3>ChatGPT Ko Kaise Use Karein?</h3>
+
+<ul>
+<li>ChatGPT ki official website ya app open karein.</li>
+<li>Apne account se sign in karein ya available option se account create karein.</li>
+<li>Message box mein apna sawal likhein.</li>
+<li>Apna question jitna clear likhenge, answer utna useful mil sakta hai.</li>
+</ul>
+
+<h3>Behtar Prompt Kaise Likhein?</h3>
+
+<p>
+Sirf “English sikhao” likhne ke bajaye aap likh sakte hain:
+</p>
+
+<p>
+<strong>“Mujhe beginner level English speaking 7 din mein practice karne ka simple plan do.”</strong>
+</p>
+
+<p>
+Is tarah AI ko aapka exact goal samajhne mein asani hoti hai.
+</p>
+
+<h3>Students Ke Liye ChatGPT</h3>
+
+<ul>
+<li>Study topics ko simple language mein samajhna</li>
+<li>Notes ka outline banana</li>
+<li>English grammar practice</li>
+<li>Quiz questions generate karna</li>
+<li>Study schedule ke ideas lena</li>
+</ul>
+
+<h3>Freelancers Ke Liye ChatGPT</h3>
+
+<ul>
+<li>Content ideas</li>
+<li>Email drafts</li>
+<li>Social media captions</li>
+<li>Client communication ke drafts</li>
+<li>Basic research aur brainstorming</li>
+</ul>
+
+<h3>Important Tip</h3>
+
+<p>
+AI ke answers ko blindly copy karne ke bajaye important information ko verify karna chahiye, especially education, finance, health aur legal topics mein.
+</p>
+
+<h3>Conclusion</h3>
+
+<p>
+ChatGPT ko properly use karna seekhne ka best tareeqa practice hai. Different questions aur clear prompts try karein aur dekhein kis type ke instructions se aapko behtar results milte hain.
+</p>
+
+</article>
+
+<section class="about" id="about">
+<h2 class="section-title">About Me</h2>
+<p>
+Welcome to Tahirghaffar Blog. Is website ka maqsad simple language mein useful technology, AI aur mobile tips share karna hai.
+</p>
 </section>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-
-  <div class="contact">
-    <form>
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
+<section class="contact" id="contact">
+<h2 class="section-title">Contact</h2>
+<p>
+Agar aap website ke bare mein contact karna chahte hain to email ke zariye message bhej sakte hain.
+</p>
+<p><strong>Email:</strong> your-email@example.com</p>
 </section>
 
 </div>
 
 <footer>
-  <p>© 2026 Tahirghaffar Blog. All Rights Reserved.</p>
+<p>© 2026 Tahirghaffar Blog. All Rights Reserved.</p>
 </footer>
 
 </body>
